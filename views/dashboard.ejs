@@ -1,0 +1,27 @@
+<%- include('layouts/header') %>
+
+<div class="container-fluid">
+  <h1>Hello index</h1>
+
+  <a href="/dashboard/admin/create" class="btn btn-primary mb-3">Tambah Data</a>
+
+  <div class="row">
+    <% products.forEach(product => { %>
+    <div class="col-3">
+      <div class="card" style="width: 18rem">
+        <img src="<%=product.imgUrl %>" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title"><%= product.name %></h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('layouts/footer') %>

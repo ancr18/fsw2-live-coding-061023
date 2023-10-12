@@ -1,0 +1,17 @@
+<%- include('layouts/header') %>
+
+<div class="container-fluid">
+  <h1>CREATE FORM</h1>
+
+  <form action="/products/create" method="post" enctype="multipart/form-data">
+    <label for="name">Name</label>
+    <input type="text" name="name" />
+
+    <label for="image">Image</label>
+    <input type="file" name="image" />
+
+    <button type="submit">Save</button>
+  </form>
+
+  <%- include('layouts/footer') %>
+</div>
